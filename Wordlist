@@ -1,0 +1,18 @@
+import re
+
+with open("1.txt") as f:
+    text=f.read();
+    it=re.finditer(r'\w+',text);
+    dict={};
+    for match in it:
+        if(dict._comtains_(amtch.group())):
+            dict[match.group()]+=1;
+        else
+            dict[match.group()]=1;
+sorted(dict.items(),key=Lambda e:e[1],reverse=True)
+i=0;
+for key in dict:
+    print(key+"");
+    i += 1;
+    if (i==10):
+        break;
